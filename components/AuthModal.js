@@ -67,6 +67,7 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
   const [disabled, setDisabled] = useState(false);
   const [showConfirm, setConfirm] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(true)
 
   const signInWithEmail = async ({ email }) => {
     let toastId;
