@@ -69,6 +69,8 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
   const [showSignIn, setShowSignIn] = useState(false);
   const [isSignUp, setIsSignUp] = useState(true)
 
+  let callBack = showSignIn ? window.location.href : '/onboarding'
+
   const signInWithEmail = async ({ email }) => {
     let toastId;
         try {
@@ -77,7 +79,7 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
           // Perform sign in
           const { error } = await signIn('email', {
             redirect: false,
-            callbackUrl: window.location.href,
+            callbackUrl: callBack,
             // callbackUrl: 'http://localhost:3000/meals',
             email,
           });
@@ -99,7 +101,7 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
         setDisabled(true);
         // Perform sign in
         signIn('google', {
-          callbackUrl: window.location.href,
+          callbackUrl: callBack,
           // callbackUrl: 'http://localhost:3000/meals',
         });
   };
@@ -109,7 +111,7 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
         setDisabled(true);
         // Perform sign in
         signIn('github', {
-          callbackUrl: window.location.href,
+          callbackUrl: callBack,
           // callbackUrl: 'http://localhost:3000/meals',
         });
   };
@@ -256,7 +258,7 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
                           <Input
                             name="email"
                             type="email"
-                            placeholder="wet@spaghetti.fun"
+                            placeholder="tim@apple.com"
                             disabled={disabled}
                             spellCheck={false}
                             // className="peer w-full rounded border bg-gray-100 p-2 text-xs placeholder-transparent"

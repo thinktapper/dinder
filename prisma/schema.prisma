@@ -1,4 +1,5 @@
-// This is your Prisma schema file,
+/
+/ This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
@@ -11,7 +12,7 @@ datasource db {
 }
 
 model Account {
-  id                 String  @id @default(cuid())
+  id                 String  @id @default(uuid())
   userId             String
   type               String
   provider           String
@@ -32,7 +33,7 @@ model Account {
 }
 
 model Session {
-  id           String   @id @default(cuid())
+  id           String   @id @default(uuid())
   sessionToken String   @unique
   userId       String
   expires      DateTime
@@ -40,9 +41,9 @@ model Session {
 }
 
 model User {
-  id            String        @id @default(cuid())
-  name          String?
-  email         String?       @unique
+  id            String        @id @default(uuid())
+  username      String
+  email         String       @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
