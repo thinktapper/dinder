@@ -76,7 +76,8 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
           // Perform sign in
           const { error } = await signIn('email', {
             redirect: false,
-            callbackUrl: 'http://localhost:3000/meals',
+            callbackUrl: window.location.href,
+            // callbackUrl: 'http://localhost:3000/meals',
             email,
           });
           // Something went wrong
@@ -97,7 +98,8 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
         setDisabled(true);
         // Perform sign in
         signIn('google', {
-          callbackUrl: 'http://localhost:3000/meals',
+          callbackUrl: window.location.href,
+          // callbackUrl: 'http://localhost:3000/meals',
         });
   };
 
@@ -106,7 +108,8 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
         setDisabled(true);
         // Perform sign in
         signIn('github', {
-          callbackUrl: 'http://localhost:3000/meals',
+          callbackUrl: window.location.href,
+          // callbackUrl: 'http://localhost:3000/meals',
         });
   };
 

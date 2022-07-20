@@ -3,7 +3,8 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import AuthModal from '/components/AuthModal'
-import Nav from '/components/Nav'
+// import Nav from '/components/Nav'
+import Layout from '/components/Layout'
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false)
@@ -21,13 +22,14 @@ export default function Home() {
   return (
     <div className="w-screen h-screen fixed bg-[url('/bg.webp')]">
     <div className='w-screen h-screen fixed bg-gradient-to-b from-black to-transparent'>
-      <Nav
-        session={session}
-        minimal={false}
-        setShowModal={setShowModal}
-        showModal={showModal}
-        setIsSignUp={setIsSignUp}
-      />
+      {/*<Nav*/}
+      {/*  session={session}*/}
+      {/*  minimal={false}*/}
+      {/*  setShowModal={setShowModal}*/}
+      {/*  showModal={showModal}*/}
+      {/*  setIsSignUp={setIsSignUp}*/}
+      {/*/>*/}
+      <Layout />
       <div className='flex flex-col w-full h-full justify-center'>
         <div className="relative flex flex-col w-full h-full min-h-200 items-center">
           <div className="flex w-full justify-center items-center">
