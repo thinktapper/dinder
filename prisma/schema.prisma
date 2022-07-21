@@ -48,7 +48,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  joinedMeals   UsersOnMeal[]
+  joinedMeals   Meal[]        @relation("JoinedMeals")
   sentVotes     Vote[]
   friendsList   String[]
   Meal          Meal[]
@@ -65,18 +65,8 @@ model Meal {
   organizer   User          @relation(fields: [organizerID], references: [id])
   organizerID String
   createdAt   DateTime      @default(now())
-  users       UsersOnMeal[]
   votes       Vote[]
-}
-
-model UsersOnMeal {
-  id        String   @id @default(cuid())
-  mealID    String
-  userID    String
-  createdAt DateTime @default(now())
-
-  user User @relation(fields: [userID], references: [id])
-  meal Meal @relation(fields: [mealID], references: [id])
+  joinedBy    User[]        @relation("JoinedMeals")
 }
 
 model Vote {
