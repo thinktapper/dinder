@@ -51,10 +51,10 @@ export default function Home() {
           <span className="font-light">&reg;</span>
         </h1>
         <h3 className="text-white text-xl font-bold uppercase tracking-widest">Swipe. Match. Eat.</h3>
-            <button className='bg-gradient-to-r from-pink-600 to-yellow-500 rounded-full hover:bg-gray-200 py-4 px-16 block whitespace-no-wrap text-white font-bold uppercase'
-                    onClick={handleClick}>
-              {status === 'authenticated' ? 'Discover' : 'Create Account'}
-            </button>
+        <button className='bg-gradient-to-r from-pink-600 to-yellow-500 rounded-full hover:bg-gradient-to-l py-4 px-16 block whitespace-no-wrap text-white font-bold uppercase'
+                onClick={handleClick}>
+          {status === 'authenticated' ? 'Discover' : 'Create Account'}
+        </button>
         {/*<p className="text-white font-bold mb-1">Explore top-rated places to eat in your area</p>*/}
       </div>
 
