@@ -1,4 +1,5 @@
 import Layout from '/components/Layout'
+import Script from 'next/script'
 import MealCreationForm from '/components/MealCreationForm'
 import axios from 'axios'
 import { getSession } from 'next-auth/react'
@@ -29,19 +30,22 @@ export async function getServerSideProps(context){
     // })
 
     return {
-        session,
         props: {
+            session: session,
             users: JSON.parse(JSON.stringify(users)),
             // organizer: JSON.parse(JSON.stringify(organizer))
         }
     }
 }
 
-const Create = ({ session, props}) => {
-    const addMeal = (data) => axios.post('/api/meals', data);
+const Create = ({ ...props }) => {
+    const addMeal = (data) => axios.post('/api/meals', data)
+    // const session = props.session
+    // const user = session.userId
 
     return (
         <Layout>
+            <Script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAgNo6ibYDfbtoLpNN23JZ0zgC4b1ntDGY&libraries=places' />
             <div className="max-w-screen-sm mx-auto">
                 <h1 className="text-xl font-medium text-gray-800">List your hunger</h1>
                 <p className="text-gray-500">
@@ -50,9 +54,9 @@ const Create = ({ session, props}) => {
                 <div className="mt-8">
                     <MealCreationForm
                         buttonText="Add meal"
-                        redirectPath="/meals"
+                        redirectPath="/dashboard"
                         users={props.users}
-                        organizer={session.user.id}
+                        // organizer={user}
                         onSubmit={addMeal}
                     />
                 </div>

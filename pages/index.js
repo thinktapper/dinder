@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { useSession, signIn, signOut } from 'next-auth/react'
@@ -29,21 +30,14 @@ export default function Home() {
       router.push('/dashboard')
       // signOut()
     }else {
-      router.push('/onboarding')
+      setShowModal(true)
+      setIsSignUp(true)
     }
-    setShowModal(true)
-    setIsSignUp(true)
   }
   return (
     <div className="w-screen h-screen fixed bg-[url('/bg.webp')] z-50">
     <div className='w-screen h-screen fixed bg-gradient-to-b from-black to-transparent z-30'>
-      {/*<Nav*/}
-      {/*  session={session}*/}
-      {/*  minimal={false}*/}
-      {/*  setShowModal={setShowModal}*/}
-      {/*  showModal={showModal}*/}
-      {/*  setIsSignUp={setIsSignUp}*/}
-      {/*/>*/}
+      <Script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAgNo6ibYDfbtoLpNN23JZ0zgC4b1ntDGY&libraries=places' />
       <Layout>
       <div className='flex flex-col w-full mt-[30vh] items-center space-y-8'>
         <h1 className="text-4xl mb-6 md:text-9xl text-white font-bold tracking-thin hover:text-rose-500 duration-300">

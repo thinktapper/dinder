@@ -1,6 +1,26 @@
 import axios from 'axios'
+import { getSession } from 'next-auth/react'
 import Layout from '/components/Layout'
 import UserForm from '/components/UserForm'
+
+export async function getServerSideProps(context) {
+    // Check if user is authenticated
+    const session = await getSession(context)
+
+    // If not, redirect to the homepage
+    if (!session) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
+    }
+
+    return {
+        props: session,
+    }
+}
 
 const onboarding = () => {
     const addUser = data => axios.patch('/api/user', data)
