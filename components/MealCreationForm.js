@@ -75,6 +75,8 @@ const MealCreationForm = ({
   const [myLocationReadable, setMyLocationReadable] = useState('')
   const [missLocation, setMissLocation] = useState(false)
 
+  const session = getSession()
+
   let guestList = []
 
   const handleSelect = async (value) => {
@@ -147,7 +149,7 @@ const MealCreationForm = ({
       // const meal = await prisma.meal.create({
       //   data: { name, endDate, voteDate, lat, long, distance, users, organizerID: user.id }
       // })
-      const data = { name, endDate, voteDate, lat, long, distance, users, organizerID: user.id }
+      const data = { name, endDate, voteDate, lat, long, distance, users, organizerID: session.user.id }
       axios.post('/api/meals', data)
       // setMeal({
       //   data: {
@@ -249,7 +251,7 @@ const MealCreationForm = ({
     lat: '',
     long: '',
     distance: '',
-    organizer: organizer.id,
+    organizer: session.user.id,
     users: [...users],
   };
 
@@ -582,8 +584,8 @@ const MealCreationForm = ({
 MealCreationForm.propTypes = {
   initialValues: PropTypes.shape({
     name: PropTypes.string,
-    endDate: PropTypes.date,
-    voteDate: PropTypes.date,
+    endDate: PropTypes.string,
+    voteDate: PropTypes.string,
     lat: PropTypes.string,
     long: PropTypes.string,
     distance: PropTypes.string,
