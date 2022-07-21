@@ -26,12 +26,12 @@ const menuItems = [
   {
     label: 'My meals',
     icon: HomeIcon,
-    href: '/meals',
+    href: '/dashboard',
   },
   {
-    label: 'Favorites',
+    label: 'Update',
     icon: HeartIcon,
-    href: '/favorites',
+    href: '/onboarding',
   },
   {
     label: 'Logout',
@@ -72,7 +72,7 @@ const Layout = ({ children }) => {
             <div className="h-full px-4 flex justify-between items-center space-x-4">
               <Link href="/">
                 <a className="flex items-center space-x-1">
-                  <Image src='/dinder-black_color.svg' alt='Dinder Logo' width={155} height={45} />
+                  <Image src='/dinder-white_color.svg' alt='Dinder Logo' width={155} height={45} />
                   {/* <SparklesIcon className="shrink-0 w-8 h-8 text-rose-500" />
                   <span className="text-xl font-semibold tracking-wide">
                     Supa<span className="text-rose-600">Vacation</span>
