@@ -221,7 +221,8 @@ const MealCreationForm = ({
       toastId = toast.loading('Submitting...');
       // Submit data
       if (typeof onSubmit === 'function') {
-        await onSubmit({ ...values });
+        const data = await onSubmit({ ...values });
+        console.log(data)
       }
       toast.success('Successfully submitted', { id: toastId });
       // Redirect user
