@@ -263,7 +263,7 @@ const MealCreationForm = ({
         initialValues={initialFormValues}
         validationSchema={MealSchema}
         validateOnBlur={false}
-        onSubmit={handleOnSubmit}
+        onSubmit={handleSubmit}
       >
         {({ isSubmitting, isValid }) => (
           <Form className="space-y-8">

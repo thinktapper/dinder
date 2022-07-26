@@ -4,7 +4,8 @@
     <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MealCreationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MealCreationForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/meals.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/meals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,9 @@
       <workItem from="1658321771635" duration="39284000" />
       <workItem from="1658424851355" duration="132000" />
       <workItem from="1658424999476" duration="2665000" />
-      <workItem from="1658496405958" duration="1186000" />
+      <workItem from="1658496405958" duration="4362000" />
+      <workItem from="1658791850254" duration="270000" />
+      <workItem from="1658850962504" duration="3061000" />
     </task>
     <servers />
   </component>
