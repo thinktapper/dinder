@@ -128,6 +128,7 @@ const ListingForm = ({
                   <select
                     value={radius}
                     onChange={(e) => setRadius(e.target.value)}
+                    className='w-full shadow-sm rounded-md py-2 pl-4 truncate border focus:outline-none focus:ring-4 focus:ring-opacity-20 transition disabled:opacity-50 disabled:cursor-not-allowed border-gray-300 focus:border-gray-400 focus:ring-gray-400'
                   >
                     <option value={1}>1</option>
                     <option value={2}>2</option>
