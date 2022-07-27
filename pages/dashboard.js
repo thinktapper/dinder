@@ -41,7 +41,7 @@ const Dashboard = ({ meals = [] }) => {
                 Manage your meals and update your events
             </p>
             <div className="mt-8">
-                <Grid homes={meals} />
+                <Grid meals={meals} />
             </div>
         </Layout>
     )

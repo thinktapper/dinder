@@ -18,10 +18,10 @@ export default async function handler(req, res) {
                 where: { email: session.user.email },
             })
 
-            const insertedMeal = await prisma.meal.create({
+            const meal = await prisma.meal.create({
                 data: { name, endDate, voteDate, lat, long, distance, organizerId: user.id },
             })
-            res.status(200).json(insertedMeal)
+            res.status(200).json(meal)
         } catch (e) {
             res.status(500).json({ message: 'Something went wrong' })
         }

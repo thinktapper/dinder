@@ -16,7 +16,7 @@ const Grid = ({ meals = [] }) => {
             <span>Unfortunately, there is nothing to display yet.</span>
             <button
                 className="mt-6 w-full bg-rose-600 text-white py-2 px-8 rounded-md"
-                onClick={router.push('/create')}>
+                onClick={() => router.push('/create')}>
                 Create a Meal
             </button>
         </p>
