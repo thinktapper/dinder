@@ -3,7 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "./src/generated/client"
+  // output   = "./src/generated/client"
 }
 
 datasource db {
@@ -49,22 +49,22 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  listedMeals   Meal[]        @relation("ListedMeals")
   joinedMeals   Meal[]        @relation("JoinedMeals")
   sentVotes     Vote[]
   friendsList   String[]
-  Meal          Meal[]
 }
 
 model Meal {
-  id          String        @id @default(cuid())
+  id          String        @id @default(uuid())
   name        String
   endDate     String
   voteDate    String
-  lat         String
-  long        String
-  distance    String
-  organizer   User          @relation(fields: [organizerID], references: [id])
-  organizerID String
+  lat         Int
+  long        Int
+  distance    Int
+  organizer   User          @relation("ListedMeals", fields: [organizerId], references: [id])
+  organizerId String
   createdAt   DateTime      @default(now())
   votes       Vote[]
   joinedBy    User[]        @relation("JoinedMeals")
