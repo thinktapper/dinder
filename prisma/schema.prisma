@@ -60,8 +60,8 @@ model Meal {
   name        String
   endDate     String
   voteDate    String
-  lat         Int
-  long        Int
+  lat         Float
+  long        Float
   distance    Int
   organizer   User          @relation("ListedMeals", fields: [organizerId], references: [id])
   organizerId String
