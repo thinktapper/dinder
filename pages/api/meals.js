@@ -23,7 +23,8 @@ export default async function handler(req, res) {
             })
             res.status(200).json(meal)
         } catch (e) {
-            res.status(500).json({ message: 'Something went wrong' })
+            console.log(e)
+            res.status(500).json({ message: 'Something went wrong', e })
         }
     }
     // HTTP method not supported!

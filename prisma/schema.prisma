@@ -3,6 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  output   = "./src/generated/client"
 }
 
 datasource db {
@@ -57,8 +58,8 @@ model User {
 model Meal {
   id          String        @id @default(cuid())
   name        String
-  endDate     DateTime
-  voteDate    DateTime
+  endDate     String
+  voteDate    String
   lat         String
   long        String
   distance    String
