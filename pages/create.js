@@ -2,9 +2,27 @@ import Layout from '/components/Layout'
 import Script from 'next/script'
 import ListingForm from '/components/ListingForm'
 import axios from 'axios'
+import { getSession } from 'next-auth/react'
+import { prisma } from '/lib/prisma'
 
 
-const Create = () => {
+export async function getServerSideProps(context) {
+    // Get user
+    const session = await getSession(context)
+    const userEmail = session.user.email
+    // Get all users
+    const users = await prisma.user.findMany()
+    // Pass the data to the ListingForm
+    return {
+        props: {
+            userEmail: JSON.parse(JSON.stringify(userEmail)),
+            users: JSON.parse(JSON.stringify(users)),
+        },
+    }
+}
+
+
+const Create = ({ userEmail, users }) => {
     const addMeal = (data) => {
         console.log(data)
         axios.post('/api/meals', data)
@@ -22,6 +40,8 @@ const Create = () => {
                 </p>
                 <div className="mt-8">
                     <ListingForm
+                        users={users}
+                        userId={userEmail}
                         buttonText="Add meal"
                         redirectPath="/dashboard"
                         onSubmit={addMeal}

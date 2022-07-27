@@ -366,34 +366,34 @@ const MealCreationForm = ({
                 disabled={disabled}
               />
 
-              {/*<div className="flex space-x-4">*/}
-              {/*  <h3>Invite friends</h3>*/}
-              {/*<div className="m-h-36 overflow-auto">*/}
-              {/*  <ul>*/}
-              {/*    {users.filter(user => user.id !== organizer).map(friend => {*/}
-              {/*        return (*/}
-              {/*          <li key={friend.id}>*/}
-              {/*            <img*/}
-              {/*              src={*/}
-              {/*                friend.image || '/flame.svg'*/}
-              {/*              }*/}
-              {/*              alt=''*/}
-              {/*              className='max-w-[50px] max-h-[50px] rounded-[50px]'*/}
-              {/*            />*/}
-              {/*            {friend.username || 'Friend'}*/}
-              {/*            <Input*/}
-              {/*              name='friends'*/}
-              {/*              type='checkbox'*/}
-              {/*              inputprops={{ 'aria-label': 'guestList' }}*/}
-              {/*              value={friend.id}*/}
-              {/*              onChange={handleCheckbox}*/}
-              {/*            />*/}
-              {/*          </li>*/}
-              {/*        )*/}
-              {/*      })}*/}
-              {/*  </ul>*/}
-              {/*</div>*/}
-              {/*</div>*/}
+              <div className="flex space-x-4">
+                <h3>Invite friends</h3>
+              <div className="m-h-36 overflow-auto">
+                <ul>
+                  {users.filter(user => user.id !== organizer).map(friend => {
+                      return (
+                        <li key={friend.id}>
+                          <img
+                            src={
+                              friend.image || '/flame.svg'
+                            }
+                            alt=''
+                            className='max-w-[50px] max-h-[50px] rounded-[50px]'
+                          />
+                          {friend.username || 'Friend'}
+                          <Input
+                            name='friends'
+                            type='checkbox'
+                            inputprops={{ 'aria-label': 'guests' }}
+                            value={friend.id}
+                            onChange={handleCheckbox}
+                          />
+                        </li>
+                      )
+                    })}
+                </ul>
+              </div>
+              </div>
             </div>
 
             <div className="flex justify-end">
