@@ -30,6 +30,7 @@ const ListingForm = ({
 
   let guests = []
 
+  const [radius, setRadius] = useState('1')
   const [disabled, setDisabled] = useState(false)
 
   const handleCheckbox = (e) => {
@@ -114,14 +115,27 @@ const ListingForm = ({
                   placeholder="42"
                   disabled={disabled}
                 />
-                <Input
-                  name="distance"
-                  type="number"
-                  min="1"
-                  label="Radius"
-                  placeholder="1"
-                  disabled={disabled}
-                />
+                {/*<Input*/}
+                {/*  name="distance"*/}
+                {/*  type=""*/}
+                {/*  min="1"*/}
+                {/*  label="Radius"*/}
+                {/*  placeholder="1"*/}
+                {/*  disabled={disabled}*/}
+                {/*/>*/}
+                <label>
+                  Distance
+                  <select
+                    value={radius}
+                    onChange={(e) => setRadius(e.target.value)}
+                  >
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                    <option value={4}>4</option>
+                    <option value={5}>5</option>
+                  </select>
+                </label>
               </div>
             </div>
 
