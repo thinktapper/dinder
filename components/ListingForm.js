@@ -89,14 +89,14 @@ const ListingForm = ({
               <Input
                 name="voteDate"
                 type="date"
-                label="voteDate"
+                label="Meal date"
                 disabled={disabled}
               />
 
               <Input
                 name="endDate"
                 type="date"
-                label="End Date"
+                label="Closing date"
                 disabled={disabled}
               />
 
@@ -139,28 +139,32 @@ const ListingForm = ({
               </div>
             </div>
 
-            <div className="flex space-x-4">
+            <div className="flex flex-col items-center mb-4">
               <h3>Invite friends</h3>
-              <div className="m-h-36 overflow-auto">
-                <ul>
+              <div className="overflow-y-auto px-3 pb-3 h-48">
+                <ul className='text-sm font-medium rounded-lg'>
                   {users.filter(user => user.email !== userEmail).map(friend => {
                     return (
-                        <li key={friend.id}>
-                          <img
-                              src={
-                                  friend.image || '/flame.svg'
-                              }
-                              alt=''
-                              className='max-w-[50px] max-h-[50px] rounded-[50px]'
-                          />
-                          {friend.username || 'Friend'}
-                          <Input
-                              name='friends'
-                              type='checkbox'
-                              inputprops={{ 'aria-label': 'guests' }}
-                              value={friend.id}
-                              onChange={handleCheckbox}
-                          />
+                        <li key={friend.id} className=''>
+                          <div className='flex items-center p-2 rounded'>
+                            <Input
+                                name='friends'
+                                className='w-4 h-4 mr-3 rounded'
+                                type='checkbox'
+                                inputprops={{ 'aria-label': 'guests' }}
+                                value={friend.id}
+                                onChange={handleCheckbox}
+                            />
+                            <img
+                                src={
+                                    friend.image || '/flame.svg'
+                                }
+                                alt=''
+                                className='max-w-[50px] max-h-[50px] rounded-[50px]'
+                            />
+                            <span className='py-3 ml-2 w-full text-sm font-medium'>{friend.username || 'Friend'}</span>
+
+                          </div>
                         </li>
                     )
                   })}
