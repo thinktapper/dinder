@@ -24,6 +24,7 @@ export default function Home() {
   // }
 
   // let directionUrl = isSignedIn ? {'/dashboard' : '/onboarding'}
+  const whereAmI = router.pathname
 
   const handleClick = () => {
     if (status === 'authenticated') {
@@ -37,7 +38,7 @@ export default function Home() {
   return (
     <div className="w-screen h-screen fixed bg-[url('/bg.webp')] z-50">
     <div className='w-screen h-screen fixed bg-gradient-to-b from-black to-transparent z-30'>
-      <Script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAgNo6ibYDfbtoLpNN23JZ0zgC4b1ntDGY&libraries=places' />
+      {/*<Script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAgNo6ibYDfbtoLpNN23JZ0zgC4b1ntDGY&libraries=places' />*/}
       <Layout>
       <div className='flex flex-col w-full mt-[30vh] items-center space-y-8'>
         <h1 className="text-4xl mb-6 md:text-9xl text-white font-bold tracking-thin hover:text-rose-500 duration-300">

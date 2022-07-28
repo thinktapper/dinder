@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ListingForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ListingForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,8 @@
       <workItem from="1658496405958" duration="4362000" />
       <workItem from="1658791850254" duration="270000" />
       <workItem from="1658850962504" duration="21030000" />
-      <workItem from="1658916202492" duration="28229000" />
+      <workItem from="1658916202492" duration="28906000" />
+      <workItem from="1658965901953" duration="2295000" />
     </task>
     <servers />
   </component>

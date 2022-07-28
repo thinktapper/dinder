@@ -55,10 +55,13 @@ const Layout = ({ children }) => {
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
 
-  let whereAmI
-  useRef(() => {
-    whereAmI = window.location.href
-  })
+  const whereAmI = router.pathname
+
+  // let whereAmI
+  // useRef(() => {
+  //   whereAmI = window.location.pathname
+  // })
+  // const whereAmI = window.location.pathname
 
   return (
     <>
@@ -77,7 +80,7 @@ const Layout = ({ children }) => {
             <div className="h-full px-4 flex justify-between items-center space-x-4">
               <Link href="/">
                 <a className="flex items-center space-x-1">
-                  <Image src={whereAmI === 'http://localhost:3000/' ? '/dinder-white_color.svg' : '/dinder-black_color.svg'} alt='Dinder Logo' width={155} height={45} />
+                  <Image src={whereAmI === '/' ? '/dinder-white_color.svg' : '/dinder-black_color.svg'} alt='Dinder Logo' width={155} height={45} />
                   {/* <SparklesIcon className="shrink-0 w-8 h-8 text-rose-500" />
                   <span className="text-xl font-semibold tracking-wide">
                     Supa<span className="text-rose-600">Vacation</span>
@@ -186,7 +189,7 @@ const Layout = ({ children }) => {
           </div>
         </header>
 
-        <main className="container flex-grow">
+        <main className="flex-grow">
             {typeof children === 'function' ? children(openModal) : children}
         </main>
 
