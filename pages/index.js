@@ -30,34 +30,37 @@ export default function Home() {
     if (status === 'authenticated') {
       router.push('/dashboard')
       // signOut()
-    }else {
+    } else {
       setShowModal(true)
       setIsSignUp(true)
     }
   }
   return (
     <div className="w-screen h-screen fixed bg-[url('/bg.webp')] z-50">
-    <div className='w-screen h-screen fixed bg-gradient-to-b from-black to-transparent z-30'>
-      {/*<Script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAgNo6ibYDfbtoLpNN23JZ0zgC4b1ntDGY&libraries=places' />*/}
-      <Layout>
-      <div className='flex flex-col w-full mt-[30vh] items-center space-y-8'>
-        <h1 className="text-4xl mb-6 md:text-9xl text-white font-bold tracking-thin hover:text-rose-500 duration-300">
-          Swipe Bite
-          <span className="font-light">&reg;</span>
-        </h1>
-        <h3 className="text-white text-xl font-bold uppercase tracking-widest">Swipe. Match. Eat.</h3>
-        <button className='bg-gradient-to-r from-pink-600 to-yellow-500 rounded-full hover:bg-gradient-to-l py-4 px-16 block whitespace-no-wrap text-white font-bold uppercase'
-                onClick={handleClick}>
-          {status === 'authenticated' ? 'Discover' : 'Create Account'}
-        </button>
-        {/*<p className="text-white font-bold mb-1">Explore top-rated places to eat in your area</p>*/}
-      </div>
+      <div className="fixed z-30 w-screen h-screen bg-gradient-to-b from-black to-transparent">
+        {/* <Script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAgNo6ibYDfbtoLpNN23JZ0zgC4b1ntDGY&libraries=places' /> */}
+        <Layout>
+          <div className="flex flex-col w-full mt-[30vh] items-center space-y-8">
+            <h1 className="mb-6 text-4xl font-bold text-white duration-300 md:text-9xl tracking-thin hover:text-rose-500">
+              Swipe Bite
+              <span className="font-light">&reg;</span>
+            </h1>
+            <h3 className="text-xl font-bold tracking-widest text-white uppercase">
+              Swipe. Match. Eat.
+            </h3>
+            <button
+              className="block px-16 py-4 font-bold text-white uppercase whitespace-no-wrap rounded-full bg-gradient-to-r from-pink-600 to-yellow-500 hover:bg-gradient-to-l"
+              onClick={handleClick}>
+              {status === 'authenticated' ? 'Discover' : 'Create Account'}
+            </button>
+            {/*<p className="mb-1 font-bold text-white">Explore top-rated places to eat in your area</p>*/}
+          </div>
 
-            {showModal && (
-                <AuthModal setShowModal={setShowModal} isSignUp={isSignUp} />
-                )}
-      </Layout>
-        </div>
+          {showModal && (
+            <AuthModal setShowModal={setShowModal} isSignUp={isSignUp} />
+          )}
+        </Layout>
       </div>
+    </div>
   )
 }
