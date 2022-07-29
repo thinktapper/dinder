@@ -16,9 +16,9 @@ const ListingSchema = Yup.object().shape({
   name: Yup.string().trim().required(),
   endDate: Yup.string().trim().required(),
   voteDate: Yup.string().trim().required(),
-  lat: Yup.number().required(),
-  long: Yup.number().required(),
-  // location: Yup.object().required(),
+  // lat: Yup.number().required(),
+  // long: Yup.number().required(),
+  location: Yup.object().shape({lat: Yup.number().required(), long: Yup.number().required()}),
   distance: Yup.number().positive().integer().min(1).required(),
   guests: Yup.array(),
 })
@@ -40,11 +40,11 @@ const ListingForm = ({
   const [address, setAddress] = useState('')
   const [coordinates, setCoordinates] = useState({
     lat: null,
-    lng: null,
+    long: null,
   })
   const [myLocation, setMyLocation] = useState({
     lat: null,
-    lng: null,
+    long: null,
   })
   const [myLocationReadable, setMyLocationReadable] = useState('')
   const [missLocation, setMissLocation] = useState(false)
@@ -59,18 +59,18 @@ const ListingForm = ({
     //   lng: latlng.lng,
     // })
     const lat = latlng.lat
-    const lng = latlng.lng
+    const long = latlng.lng
 
     console.log('latlng -> ', latlng)
-    console.log(lat, lng)
+    console.log(lat, long)
 
-    return lat, lng
+    return (lat, long)
   }
 
   const getMyLocationReadable = async (lat, lng) => {
     try {
       const res = await axios.get(
-        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${process.env.GOOGLE_API_KEY}`
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${process.env.GOOGLE_API_KEY}`
       )
       setMyLocationReadable(res.data.results[0].formatted_address)
       console.log('mylocationreadable -> ', myLocationReadable)
@@ -98,10 +98,10 @@ const ListingForm = ({
     return guests
   }
 
-  const handleOnSubmit = async (e, values, actions) => {
-    e.preventDefault()
+  const handleOnSubmit = async (values) => {
+    // e.preventDefault()
     let toastId
-    console.log(values, actions, 'fartAgain')
+    console.log(values)
     try {
       setDisabled(true)
       toastId = toast.loading('Submitting...')
@@ -109,7 +109,7 @@ const ListingForm = ({
       console.log(...values)
       // Submit data
       if (typeof onSubmit === 'function') {
-        await onSubmit({ lat, lng, ...values })
+        await onSubmit({ ...values })
       }
       toast.success('Successfully submitted', { id: toastId })
       // Redirect user
@@ -126,9 +126,9 @@ const ListingForm = ({
     name: '',
     endDate: '',
     voteDate: '',
-    // location: '',
-    lat: '',
-    long: '',
+    location: {lat: '', long: ''},
+    // lat: '',
+    // long: '',
     distance: '',
     guests: [],
   }
@@ -139,7 +139,7 @@ const ListingForm = ({
         initialValues={initialFormValues}
         validationSchema={ListingSchema}
         validateOnBlur={false}
-        onSubmit={e => handleOnSubmit(e)}
+        onSubmit={handleOnSubmit}
         // onSubmit={() => console.log('farts')}
       >
         {props => {
@@ -161,7 +161,7 @@ const ListingForm = ({
                   name="name"
                 />
                 {touched.name && errors.name && <div>{errors.name}</div>}
-                {/* {!myLocation.lat && (
+                {!myLocation.lat && (
                   <PlacesAutocomplete
                     value={address}
                     onChange={setAddress}
@@ -182,7 +182,7 @@ const ListingForm = ({
                           // name={location: { lat, lng }}
                           type="textarea"
                           label="location"
-                          disabled={disabled}
+                          // disabled={disabled}
                         />
                         <ErrorMessage
                           className="errorMsg"
@@ -214,7 +214,7 @@ const ListingForm = ({
                       </div>
                     )}
                   </PlacesAutocomplete>
-                )} */}
+                )}
                 {/*<button*/}
                 {/*    className='mb-5 bg-blue-500 rounded'*/}
                 {/*    onClick={() => getMyLocation()}*/}
@@ -230,22 +230,22 @@ const ListingForm = ({
                 {/*)}*/}
 
                 <div className="flex space-x-4">
-                  <Input
-                    name="lat"
-                    // value="42.123456"
-                    type="number"
-                    label="Latitude"
-                    placeholder="42"
-                    disabled={disabled}
-                  />
-                  <Input
-                    name="long"
-                    // value="42.123344"
-                    type="number"
-                    label="Longitude"
-                    placeholder="42"
-                    disabled={disabled}
-                  />
+                  {/*<Input*/}
+                  {/*  name="lat"*/}
+                  {/*  // value="42.123456"*/}
+                  {/*  type="number"*/}
+                  {/*  label="Latitude"*/}
+                  {/*  placeholder="42"*/}
+                  {/*  disabled={disabled}*/}
+                  {/*/>*/}
+                  {/*<Input*/}
+                  {/*  name="long"*/}
+                  {/*  // value="42.123344"*/}
+                  {/*  type="number"*/}
+                  {/*  label="Longitude"*/}
+                  {/*  placeholder="42"*/}
+                  {/*  disabled={disabled}*/}
+                  {/*/>*/}
                   <Input
                     name="voteDate"
                     type="date"
@@ -286,6 +286,7 @@ const ListingForm = ({
                   </label>
                 </div>
               </div>
+              {console.log (errors), console.log (touched)}
 
               <div className="flex flex-col items-center mb-4">
                 <h3>Invite guests</h3>
@@ -347,9 +348,9 @@ ListingForm.propTypes = {
     name: PropTypes.string,
     endDate: PropTypes.string,
     voteDate: PropTypes.string,
-    // location: PropTypes.object,
-    lat: PropTypes.number,
-    long: PropTypes.number,
+    location: PropTypes.object,
+    // lat: PropTypes.number,
+    // long: PropTypes.number,
     distance: PropTypes.number,
     guests: PropTypes.array,
   }),

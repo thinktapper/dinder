@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <div className="w-screen h-screen fixed bg-[url('/bg.webp')] z-50">
       <div className="fixed z-30 w-screen h-screen bg-gradient-to-b from-black to-transparent">
-        {/* <Script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAgNo6ibYDfbtoLpNN23JZ0zgC4b1ntDGY&libraries=places' /> */}
+        <Script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAgNo6ibYDfbtoLpNN23JZ0zgC4b1ntDGY&libraries=places' />
         <Layout>
           <div className="flex flex-col w-full mt-[30vh] items-center space-y-8">
             <h1 className="mb-6 text-4xl font-bold text-white duration-300 md:text-9xl tracking-thin hover:text-rose-500">

@@ -42,7 +42,7 @@ const Create = ({ userEmail, users }) => {
             userId={userEmail}
             buttonText="Add meal"
             redirectPath="/dashboard"
-            onSubmit={data => '/api/meals'}
+            onSubmit={addMeal}
           />
         </div>
       </div>
