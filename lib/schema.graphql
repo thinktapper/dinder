@@ -5,7 +5,7 @@
 type Meal {
   distance: Int!
   endDate: String!
-  id: Int!
+  id: ID!
   lat: Float!
   long: Float!
   name: String!
@@ -19,7 +19,7 @@ type Query {
 
 type User {
   email: String!
-  id: Int!
+  id: ID!
   image: String!
   name: String!
   username: String!
