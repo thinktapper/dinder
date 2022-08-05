@@ -31,7 +31,7 @@ const Create = ({ userEmail, users }) => {
   return (
     <Layout>
       <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgNo6ibYDfbtoLpNN23JZ0zgC4b1ntDGY&libraries=places" />
-      <div className="max-w-screen-sm mx-auto">
+      <div className="my-7 max-w-5xl mx-auto">
         <h1 className="text-xl font-medium text-gray-800">List your hunger</h1>
         <p className="text-gray-500">
           Fill out the form below to start a new meal.
