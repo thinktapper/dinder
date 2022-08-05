@@ -1,6 +1,6 @@
 import Layout from '/components/Layout'
 import Script from 'next/script'
-import ListingForm from '/components/ListingForm'
+import MealCreationForm from '/components/MealCreationForm'
 import axios from 'axios'
 import { getSession } from 'next-auth/react'
 import { prisma } from '/lib/prisma'
@@ -37,13 +37,14 @@ const Create = ({ userEmail, users }) => {
           Fill out the form below to start a new meal.
         </p>
         <div className="mt-8">
-          <ListingForm
-            users={users}
-            userId={userEmail}
-            buttonText="Add meal"
-            redirectPath="/dashboard"
-            onSubmit={addMeal}
-          />
+          {/*<ListingForm*/}
+          {/*  users={users}*/}
+          {/*  userId={userEmail}*/}
+          {/*  buttonText="Add meal"*/}
+          {/*  redirectPath="/dashboard"*/}
+          {/*  onSubmit={addMeal}*/}
+          {/*/>*/}
+          <MealCreationForm />
         </div>
       </div>
     </Layout>
