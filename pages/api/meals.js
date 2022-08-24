@@ -11,7 +11,9 @@ export default async function handler(req, res) {
   // Create new meal
   if (req.method === 'POST') {
     try {
-      const { name, endDate, voteDate, lat, long, distance } = req.body
+      let { name, endDate, voteDate, lat, long, distance } = req.body
+      lat = parseFloat(lat)
+      long = parseFloat(long)
 
       // Retrieve the current authenticated user
       const user = await prisma.user.findUnique({

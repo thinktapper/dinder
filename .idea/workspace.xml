@@ -4,12 +4,10 @@
     <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MealCreationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MealCreationForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql/mutations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql/queries.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/graphql.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/api/meals.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/meals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/meals/[id]/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/meals/[id]/edit.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +89,7 @@
       <workItem from="1659771319169" duration="4478000" />
       <workItem from="1659788828837" duration="5844000" />
       <workItem from="1661118805091" duration="672000" />
-      <workItem from="1661315384941" duration="1868000" />
+      <workItem from="1661315384941" duration="10230000" />
     </task>
     <servers />
   </component>

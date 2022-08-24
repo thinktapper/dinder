@@ -49,7 +49,7 @@ const Edit = (meal = null) => {
                 </p>
                 <div className="mt-8">
                     {meal ? (
-                        <ListingForm
+                        <MealCreationForm
                             initialValues={meal}
                             buttonText="Update meal"
                             redirectPath={`/meals/${meal.id}`}
