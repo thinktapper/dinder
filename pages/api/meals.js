@@ -11,7 +11,7 @@ export default async function handler(req, res) {
   // Create new meal
   if (req.method === 'POST') {
     try {
-      let { name, endDate, voteDate, lat, long, distance } = req.body
+      let { name, endDate, voteDate, lat, long, distance, guestList } = req.body
       lat = parseFloat(lat)
       long = parseFloat(long)
 
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
           long,
           distance,
           organizerId: user.id,
-          // joinedBy: guests,
+          joinedBy: guestList,
         },
       })
       res.status(200).json(meal)

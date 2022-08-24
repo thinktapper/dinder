@@ -44,7 +44,7 @@ const Create = ({ userEmail, users }) => {
           {/*  redirectPath="/dashboard"*/}
           {/*  onSubmit={addMeal}*/}
           {/*/>*/}
-          <MealCreationForm />
+          <MealCreationForm users={users} organizer={userEmail} redirectPath='/meal' />
         </div>
       </div>
     </Layout>

@@ -1,10 +1,13 @@
+// import Input from '@/components/Input'
 import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import classNames from 'classnames'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import GooglePlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
 import axios from 'axios'
+import { toast } from 'react-hot-toast'
 import * as yup from 'yup'
 
 const schema = yup.object().shape({
@@ -16,18 +19,49 @@ const schema = yup.object().shape({
   lat: yup.string().trim().required('Latitude is required'),
   long: yup.string().trim().required('Longitude is required'),
   distance: yup.number().required('Distance / Radius is required'),
+  guests: yup.array(),
 })
 
-const MealCreationForm = () => {
+const MealCreationForm = ({ users, organizer, redirectPath }) => {
+  const router = useRouter()
   const { data: session } = useSession()
   const { register, setValue, handleSubmit, watch, formState: { errors }} = useForm({
     resolver: yupResolver(schema),
   })
   const [address, setAddress] = useState(null)
+  let guestList = []
+
+  const handleCheckbox = meal => {
+    const { checked, value } = meal.target
+    checked ? guestList.push(value) : guestList.splice(guestList.indexOf(value), 1)
+    return guestList
+  }
+
+  // const data = {
+  //   name: watch('name'),
+  //   endDate: watch('endDate'),
+  //   voteDate: watch('voteDate'),
+  //   lat: watch('lat'),
+  //   long: watch('long'),
+  //   distance: watch('distance'),
+  //   guests: guestList,
+  // }
 
   const onSubmit = handleSubmit(async (data) => {
     console.log (data)
-    await axios.post('/api/meals', data)
+    let toastId
+    try {
+      toastId = toast.loading('Creating meal...')
+      await axios.post('/api/meals', data)
+      toast.success('Meal created!', { id: toastId })
+
+      // Redirect user
+      if (redirectPath){
+        await router.push(redirectPath)
+      }
+    } catch (e) {
+      toast.error('Unable to create meal', { id: toastId })
+    }
   })
 
   return (
@@ -138,6 +172,36 @@ const MealCreationForm = () => {
                 </select>
               </label>
               <p>{errors.distance?.message}</p>
+            </div>
+
+            <div className="flex space-x-4">
+              <h3>Invite friends</h3>
+              <div className="m-h-36 overflow-auto">
+                <ul>
+                  {users.filter(user => user.email !== organizer).map(friend => {
+                    return (
+                      <li key={friend.id}>
+                        <img
+                          src={
+                            friend.image || '/flame.svg'
+                          }
+                          alt=''
+                          className='max-w-[50px] max-h-[50px] rounded-[50px]'
+                        />
+                        {friend.username || 'Friend'}
+                        <input
+                          {...register('guests')}
+                          name='friends'
+                          type='checkbox'
+                          inputprops={{ 'aria-label': 'guests' }}
+                          value={friend.id}
+                          onChange={handleCheckbox}
+                        />
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
             </div>
 
             {!!watch('name') && (
