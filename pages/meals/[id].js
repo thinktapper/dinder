@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Layout from '/components/Layout'
+import RestaurantCards from '/components/RestaurantCards'
 import { prisma } from '/lib/prisma'
 
 export async function getStaticPaths() {
@@ -41,7 +42,7 @@ export async function getStaticProps({ params }) {
     }
 }
 
-const joinedMeal = (meal = null) => {
+const JoinedMeal = (meal = null) => {
     const router = useRouter()
 
     const { data: session } = useSession()
@@ -71,7 +72,7 @@ const joinedMeal = (meal = null) => {
             await axios.delete(`/api/meals/${meal.id}`)
             // Redirect user
             toast.success('Successfully deleted', { id: toastId })
-            router.push('/dashboard')
+            await router.push('/dashboard')
         }catch (e) {
             console.log(e)
             toast.error('Unable to delete meal', { id: toastId})
@@ -137,9 +138,13 @@ const joinedMeal = (meal = null) => {
                 </div>
 
                 <p className="mt-8 text-lg">{meal?.description ?? ''}</p>
+
+                <div className="mt-8">
+                    <RestaurantCards meal={meal} />
+                </div>
             </div>
         </Layout>
     )
 }
 
-export default joinedMeal
+export default JoinedMeal

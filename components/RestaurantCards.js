@@ -2,7 +2,7 @@ import Image from 'next/image'
 import TinderCard from 'react-tinder-card'
 import { useEffect, useState } from 'react'
 
-export default function Meal() => {
+export default function Meal(){
   const restaurants = [
     {
       "id": "001",

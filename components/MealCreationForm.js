@@ -1,5 +1,6 @@
 // import Input from '@/components/Input'
 import { useSession } from 'next-auth/react'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import classNames from 'classnames'
@@ -49,19 +50,20 @@ const MealCreationForm = ({ users, organizer, redirectPath }) => {
 
   const onSubmit = handleSubmit(async (data) => {
     console.log (data)
+    await axios.post('/api/meals', data)
     let toastId
-    try {
-      toastId = toast.loading('Creating meal...')
-      await axios.post('/api/meals', data)
-      toast.success('Meal created!', { id: toastId })
-
-      // Redirect user
-      if (redirectPath){
-        await router.push(redirectPath)
-      }
-    } catch (e) {
-      toast.error('Unable to create meal', { id: toastId })
-    }
+    // try {
+    //   toastId = toast.loading('Creating meal...')
+    //   await axios.post('/api/meals', data)
+    //   toast.success('Meal created!', { id: toastId })
+    //
+    //   // Redirect user
+    //   if (redirectPath){
+    //     await router.push(redirectPath)
+    //   }
+    // } catch (e) {
+    //   toast.error('Unable to create meal', { id: toastId })
+    // }
   })
 
   return (
@@ -181,7 +183,7 @@ const MealCreationForm = ({ users, organizer, redirectPath }) => {
                   {users.filter(user => user.email !== organizer).map(friend => {
                     return (
                       <li key={friend.id}>
-                        <img
+                        <Image
                           src={
                             friend.image || '/flame.svg'
                           }

@@ -32,10 +32,12 @@ const Card = ({
             <ol className="mt-1 inline-flex items-center space-x-1 text-gray-500">
                 <li>
                     <span>{guests ?? 0} guests</span>
+                    {/* eslint-disable-next-line jsx-a11y/aria-proptypes */}
                     <span aria-label='true'> · </span>
                 </li>
                 <li>
                     <span>{distance ?? 0} far away</span>
+                    {/* eslint-disable-next-line jsx-a11y/aria-proptypes */}
                     <span aria-label='true'> · </span>
                 </li>
                 <li>
