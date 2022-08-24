@@ -1,6 +1,7 @@
 import { useSession } from 'next-auth/react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import axios from 'axios'
 import * as yup from 'yup'
 
 const schema = yup.object().shape({
@@ -20,6 +21,7 @@ const MealCreationForm = () => {
 
   const onSubmit = handleSubmit(async (data) => {
     console.log (data)
+    await axios.post('/api/meals', data)
   })
 
   return (

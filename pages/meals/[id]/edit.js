@@ -1,5 +1,5 @@
 import Layout from '/components/Layout'
-import ListingForm from '/components/ListingForm'
+import MealCreationForm from '/components/MealCreationForm'
 import { getSession } from 'next-auth/react'
 import { prisma } from '/lib/prisma'
 import axios from 'axios'
