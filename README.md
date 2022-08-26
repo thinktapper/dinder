@@ -4,7 +4,7 @@ Write a short sentence or two about this project and what it does. Be sure to in
 
 **Link to project:** http://recruiters-love-seeing-live-demos.com/
 
-![alt tag](http://placekitten.com/1200/650)
+![alt tag](https://source.unsplash.com/random/1200×650/?restaurant)
 
 ## How It's Made:
 

@@ -62,19 +62,19 @@ export default function Meal(){
 
 
   return (
-    <div>
-      <div className='flex-1 -mt-6'>
-        <div className='relative bg-white h-3/4 rounded-xl'>
-          {restaurants.map(restaurant =>
-            <TinderCard className="swipe" key={restaurant.id} onSwipe={(dir) => swiped(dir, restaurant.name)} onCardLeftScreen={() => outOfFrame(restaurant.name)}>
-              <div className="bg-white shadow-md rounded-lg overflow-hidden">
+    <div className='flex justify-between'>
+      <div className='w-2/3 flex flex-col justify-center items-center h-full'>
+        <div className='w-96 h-{650}'>
+          {restaurants?.map(restaurant =>
+            <TinderCard className="absolute" key={restaurant.id} onSwipe={(dir) => swiped(dir, restaurant.id)} onCardLeftScreen={() => outOfFrame(restaurant.name)}>
+              <div className="w-96 h-{650} bg-cover bg-center shadow-md rounded-lg overflow-hidden">
                 <Image className='absolute top-0 h-full w-full rounded-xl' src={restaurant.image} alt={restaurant.name} width={320} height={240} />
-                <h3 className="text-xl font-bold text-center p-4">{restaurant.name}</h3>
+                <h3 className="text-xl font-bold text-center mt-0 p-4">{restaurant.name}</h3>
               </div>
             </TinderCard>
 
           )}
-          <div className="absolute bottom-0 bg-white w-full flex-row justify-between items-between h-20 px-6 py-2 rounded-b-xl">
+          <div className="absolute bottom-0 p-2.5">
 
           </div>
         </div>
