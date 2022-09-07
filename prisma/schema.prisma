@@ -49,13 +49,23 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  listedMeals   Meal[]        @relation("ListedMeals")
-  joinedMeals   Meal[]        @relation("JoinedMeals")
+  listedHerds   Herd[]        @relation("ListedHerds")
+  joinedFeasts  Feast[]       @relation("JoinedFeasts")
   sentVotes     Vote[]
   friendsList   String[]
 }
 
-model Meal {
+model Herd {
+  id        String  @id @default(uuid())
+  name      String
+  leader    String
+  members   User[]
+  feasts    Feast[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Feast {
   id          String        @id @default(uuid())
   name        String
   endDate     String
@@ -63,16 +73,16 @@ model Meal {
   lat         Float
   long        Float
   distance    Int
-  organizer   User          @relation("ListedMeals", fields: [organizerId], references: [id])
-  organizerId String
+  leader      User          @relation("ListedHerds", fields: [leaderId], references: [id])
+  leaderId    String
   createdAt   DateTime      @default(now())
   votes       Vote[]
-  joinedBy    User[]        @relation("JoinedMeals")
+  joinedBy    User[]        @relation("JoinedFeasts")
 }
 
 model Vote {
-  id           String   @id @default(cuid())
-  mealId       String
+  id           String   @id @default(uuid())
+  feastId      String
   restauantId  String
   userId       String
   positiveVote Int
@@ -80,7 +90,7 @@ model Vote {
   createdAt    DateTime @default(now())
 
   user User @relation(fields: [userId], references: [id])
-  meal Meal @relation(fields: [mealId], references: [id])
+  feast Feast @relation(fields: [feastId], references: [id])
 }
 
 model VerificationToken {
