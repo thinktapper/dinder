@@ -3,7 +3,7 @@ import TinderCard from 'react-tinder-card'
 import { useEffect, useState } from 'react'
 
 export default function Meal(){
-  const restaurants = [
+  const [restaurants, setRestaurants] = useState([
     {
       "id": "001",
       "image": "https://imgur.com/OckVkRo.jpg",
@@ -47,7 +47,12 @@ export default function Meal(){
       "long": 42.0,
       "address": "123 Test Lane"
     }
-  ]
+  ])
+
+  useEffect(() => {
+
+
+  }, [restaurants])
 
   const [lastDirection, setLastDirection] = useState('')
 
