@@ -35,7 +35,7 @@
     "react-google-places-autocomplete": "^3.4.0",
     "react-hook-form": "^7.34.0",
     "react-hot-toast": "^2.3.0",
-    "react-tinder-card": "file:../react-tinder-card",
+    "react-tinder-card": "^1.5.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {

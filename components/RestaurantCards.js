@@ -6,7 +6,7 @@ export default function Meal(){
   const restaurants = [
     {
       "id": "001",
-      "image": "https://loremflickr.com/320/240/restaurant",
+      "image": "https://imgur.com/OckVkRo.jpg",
       "name": "HasCheesBurgers",
       "description": "After deciding if canHasCheesburger, get off your can and can-can on down to HasCheeseburger for all your cheeseburger needs.",
       "cuisine": "American",
@@ -16,7 +16,7 @@ export default function Meal(){
     },
     {
       "id": "002",
-      "image": "https://loremflickr.com/320/240/restaurant",
+      "image": "https://imgur.com/oPj4A8u.jpg",
       "name": "Luxury houseboat",
       "description": "Sat three ready meat myself tonight replied terrible town anybody.",
       "cuisine": "Mexican",
@@ -27,7 +27,7 @@ export default function Meal(){
     },
     {
       "id": "003",
-      "image": "https://loremflickr.com/320/240/restaurant",
+      "image": "https://imgur.com/Q9WPlWA.jpg",
       "name": "Fishi Sushi",
       "description": "The fishiest Sushi around. Just follow your nose to Fishi Sushi. From the moment you walk in you will think to yourself, 'Something smells Fishi'.",
       "cuisine": "Asian",
@@ -38,7 +38,7 @@ export default function Meal(){
     },
     {
       "id": "004",
-      "image": "https://loremflickr.com/320/240/restaurant",
+      "image": "https://imgur.com/wDmRJPc.jpg",
       "name": "The Mill",
       "description": "Extremity direction existence as dashwoods do up. Securing marianne led welcomed offended but offering six raptures.",
       "cuisine": "American",
@@ -62,9 +62,10 @@ export default function Meal(){
 
 
   return (
-    <div className='flex justify-between'>
-      <div className='w-2/3 flex flex-col justify-center items-center h-full'>
-        <div className='w-96 h-{650}'>
+    // <div className='bg-transparent'>
+    //   <div className='w-2/3 flex flex-col justify-center items-center h-full'>
+    //     <div className='w-96 h-{650}'>
+      <>
           {restaurants?.map(restaurant =>
             <TinderCard className="absolute" key={restaurant.id} onSwipe={(dir) => swiped(dir, restaurant.id)} onCardLeftScreen={() => outOfFrame(restaurant.name)}>
               <div className="w-96 h-{650} bg-cover bg-center shadow-md rounded-lg overflow-hidden">
@@ -74,11 +75,12 @@ export default function Meal(){
             </TinderCard>
 
           )}
-          <div className="absolute bottom-0 p-2.5">
-
-          </div>
-        </div>
-
-      </div>
-    </div>
+      </>
+    //       <div className="absolute bottom-0 p-2.5">
+    //
+    //       </div>
+    //     </div>
+    //
+    //   </div>
+    // </div>
 )}
