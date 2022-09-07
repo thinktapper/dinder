@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment=":clown_face: FONDLED THE CODE">
+    <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment=":art: Derpy hooves&#10;..cards tailwindCSS lookin better">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/RestaurantCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/RestaurantCards.js" afterDir="false" />
     </list>
@@ -148,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661518922705</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=":art: Derpy hooves&#10;..cards tailwindCSS lookin better">
+      <created>1662583337873</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662583337874</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +175,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":bricks: Errare humanum est." />
     <MESSAGE value=":clown_face: FONDLED THE CODE" />
-    <option name="LAST_COMMIT_MESSAGE" value=":clown_face: FONDLED THE CODE" />
+    <MESSAGE value=":art: Derpy hooves&#10;..cards tailwindCSS lookin better" />
+    <option name="LAST_COMMIT_MESSAGE" value=":art: Derpy hooves&#10;..cards tailwindCSS lookin better" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
