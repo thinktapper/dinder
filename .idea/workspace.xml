@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/RestaurantCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/RestaurantCards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="Andrew Tapper &lt;andrew@tapper.codes&gt;" />
@@ -139,6 +142,7 @@
       <workItem from="1661508600291" duration="386000" />
       <workItem from="1661508996048" duration="6472000" />
       <workItem from="1662528527131" duration="151000" />
+      <workItem from="1662633909252" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary=":bricks: Errare humanum est.">
       <created>1661354665389</created>
@@ -168,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662590121619</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=":lipstick: custom box shadow on cards lookin riiiight">
+      <created>1662591766409</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662591766409</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +202,8 @@
     <MESSAGE value=":clown_face: FONDLED THE CODE" />
     <MESSAGE value=":art: Derpy hooves&#10;..cards tailwindCSS lookin better" />
     <MESSAGE value=":dizzy: Gotta make you understand" />
-    <option name="LAST_COMMIT_MESSAGE" value=":dizzy: Gotta make you understand" />
+    <MESSAGE value=":lipstick: custom box shadow on cards lookin riiiight" />
+    <option name="LAST_COMMIT_MESSAGE" value=":lipstick: custom box shadow on cards lookin riiiight" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
