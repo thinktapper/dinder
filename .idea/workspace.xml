@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment="">
+    <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment=":zap: Update heroicons to v2, add swipe buttons component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/RestaurantCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/RestaurantCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AuthModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AuthModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -34,6 +35,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2CCy7aolDxpzcZVVcyH9CL3yvDJ" />
   <component name="ProjectLevelVcsManager">
@@ -142,7 +146,10 @@
       <workItem from="1661508600291" duration="386000" />
       <workItem from="1661508996048" duration="6472000" />
       <workItem from="1662528527131" duration="151000" />
-      <workItem from="1662633909252" duration="1985000" />
+      <workItem from="1662633909252" duration="8213000" />
+      <workItem from="1662716334489" duration="1745000" />
+      <workItem from="1662754807634" duration="842000" />
+      <workItem from="1663211851105" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary=":bricks: Errare humanum est.">
       <created>1661354665389</created>
@@ -179,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662591766409</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=":zap: Update heroicons to v2, add swipe buttons component">
+      <created>1662637262047</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662637262047</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +217,8 @@
     <MESSAGE value=":art: Derpy hooves&#10;..cards tailwindCSS lookin better" />
     <MESSAGE value=":dizzy: Gotta make you understand" />
     <MESSAGE value=":lipstick: custom box shadow on cards lookin riiiight" />
-    <option name="LAST_COMMIT_MESSAGE" value=":lipstick: custom box shadow on cards lookin riiiight" />
+    <MESSAGE value=":zap: Update heroicons to v2, add swipe buttons component" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: Update heroicons to v2, add swipe buttons component" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

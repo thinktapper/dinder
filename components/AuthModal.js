@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import { toast } from 'react-hot-toast';
 import { Formik, Form } from 'formik';
 import { Dialog, Transition } from '@headlessui/react';
-import { SparklesIcon, MailOpenIcon, XIcon, FireIcon } from '@heroicons/react/outline';
+import { SparklesIcon, MailOpenIcon, XIcon, FireIcon } from '@heroicons/react/24/outline';
 import Input from './Input';
 import { signIn } from 'next-auth/react';
 

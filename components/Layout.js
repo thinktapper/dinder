@@ -9,12 +9,12 @@ import { Menu, Transition } from '@headlessui/react';
 import {
   HeartIcon,
   HomeIcon,
-  LogoutIcon,
+  ArrowLeftOnRectangleIcon,
   PlusIcon,
   SparklesIcon,
   UserIcon,
-} from '@heroicons/react/outline';
-import { ChevronDownIcon } from '@heroicons/react/solid';
+} from '@heroicons/react/24/outline';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { useSession, signOut } from 'next-auth/react';
 
 const menuItems = [
@@ -35,7 +35,7 @@ const menuItems = [
   },
   {
     label: 'Logout',
-    icon: LogoutIcon,
+    icon: ArrowLeftOnRectangleIcon,
     onClick: signOut,
   },
 ];
