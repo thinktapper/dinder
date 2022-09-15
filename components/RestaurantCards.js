@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import TinderCard from 'react-tinder-card'
 import { useEffect, useState } from 'react'
+import SwipeButtons from '/components/SwipeButtons'
 
 export default function Meal(){
   const [restaurants, setRestaurants] = useState([
@@ -80,7 +81,11 @@ export default function Meal(){
             </TinderCard>
 
           )}
+
         </div>
+        {/*<div className='flex flex-row justify-evenly'>*/}
+        {/*  <SwipeButtons />*/}
+        {/*</div>*/}
       </>
     //       <div className="absolute bottom-0 p-2.5">
     //
