@@ -1,9 +1,34 @@
 import Image from 'next/image'
 import TinderCard from 'react-tinder-card'
 import { useEffect, useState } from 'react'
-import SwipeButtons from '/components/SwipeButtons'
+// import SwipeButtons from '/components/SwipeButtons'
+import axios from 'axios'
 
-export default function Meal(){
+export async function getServerSideProps({ meal }) {
+  // Fetch data from external API
+  // const res = await fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${meal.lat}%2C${meal.long}&radius=${Math.floor(meal.distance * 1609)}&type=restaurant&key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`)
+
+  const res = await fetch('https://api.yelp.com/v3/businesses/search', {
+    headers: {
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_YELP_API_KEY}`
+    },
+    params: {
+      term: 'restaurants',
+      latitude: meal.lat,
+      longitude: meal.long,
+      radius: meal.distance * 1609,
+      sort_by: "relevance",
+      limit: 50,
+    }
+  })
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: JSON.parse(JSON.stringify(data)) }
+}
+
+export default function Meal({ data }) {
+  console.log(data)
   const [restaurants, setRestaurants] = useState([
     {
       "id": "001",
@@ -50,10 +75,46 @@ export default function Meal(){
     }
   ])
 
+  const fetchRestaurants = async () => {
+    // fetch restaurants from yelp api
+    const response = await fetch('/api/restaurants', {meal})
+    const data = await response.json()
+    console.log(data)
+
+    // const res = await axios.get('https://api.yelp.com/v3/businesses/search', {
+    //   headers: {
+    //     Authorization: `Bearer ${process.env.NEXT_PUBLIC_YELP_API_KEY}`
+    //   },
+    //   params: {
+    //     term: 'restaurants',
+    //     latitude: meal.lat,
+    //     longitude: meal.long,
+    //     radius: meal.distance * 1609,
+    //     sort_by: "relevance",
+    //     limit: 50,
+    //   }
+    // })
+    // setRestaurants(res.data.businesses)
+    // console.log(res.data.businesses)
+
+    // const {data} = await axios(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${meal.lat}%2C${meal.long}&radius=${Math.floor(meal.distance * 1609)}&type=restaurant&key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`)
+    // setRestaurants(data.results)
+    // console.log(data)
+
+    // try {
+    //   const res = await fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${meal.lat}%2C${meal.long}&radius=${Math.floor(meal.distance * 1609)}&type=restaurant&key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`)
+    //   const data = await res.json()
+    //   setRestaurants(data.results)
+    //   console.log(data)
+    // } catch (e) {
+    //   console.log(e)
+    // }
+  }
+
   useEffect(() => {
+    // fetchRestaurants()
 
-
-  }, [restaurants])
+  }, [])
 
   const [lastDirection, setLastDirection] = useState('')
 

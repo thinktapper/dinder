@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import { toast } from 'react-hot-toast';
 import { Formik, Form } from 'formik';
 import { Dialog, Transition } from '@headlessui/react';
-import { SparklesIcon, MailOpenIcon, XIcon, FireIcon } from '@heroicons/react/24/outline';
+import { SparklesIcon, EnvelopeOpenIcon, XMarkIcon, FireIcon } from '@heroicons/react/24/outline';
 import Input from './Input';
 import { signIn } from 'next-auth/react';
 
@@ -45,7 +45,7 @@ const Confirm = ({ show = false, email = '' }) => (
           <div className="overflow-hidden transition-all transform">
             <h3 className="text-center text-lg font-medium leading-6">
               <div className="flex flex-col justify-center items-center space-y-4">
-                <MailOpenIcon className="w-12 h-12 shrink-0 text-rose-500" />
+                <EnvelopeOpenIcon className="w-12 h-12 shrink-0 text-rose-500" />
               </div>
               <p className="text-2xl font-semibold mt-2">Confirm your email</p>
             </h3>
@@ -184,7 +184,7 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
                 onClick={closeModal}
                 className="absolute top-2 right-2 shrink-0 p-1 rounded-md hover:bg-gray-100 transition focus:outline-none"
               >
-                <XIcon className="w-5 h-5" />
+                <XMarkIcon className="w-5 h-5" />
               </button>
 
               <div className="py-12">
