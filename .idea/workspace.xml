@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment=":zap: Update heroicons to v2, add swipe buttons component">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AuthModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AuthModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/RestaurantCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/RestaurantCards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Grid.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +151,7 @@
       <workItem from="1663654964485" duration="1840000" />
       <workItem from="1663739030423" duration="602000" />
       <workItem from="1663760375929" duration="803000" />
-      <workItem from="1663978643927" duration="2068000" />
+      <workItem from="1663978643927" duration="2331000" />
     </task>
     <task id="LOCAL-00001" summary=":bricks: Errare humanum est.">
       <created>1661354665389</created>
