@@ -188,6 +188,8 @@ const MealCreationForm = ({ users, organizer, redirectPath }) => {
                             friend.image || '/flame.svg'
                           }
                           alt=''
+                          width={50}
+                          height={50}
                           className='max-w-[50px] max-h-[50px] rounded-[50px]'
                         />
                         {friend.username || 'Friend'}
@@ -206,14 +208,41 @@ const MealCreationForm = ({ users, organizer, redirectPath }) => {
               </div>
             </div>
 
-            {!!watch('name') && (
-                <button
-                  className='w-full rounded-full bg-blue-400 p-2 text-white'
+            {/*{!!watch('name') && (*/}
+            {/*    // <button*/}
+            {/*    //   className='w-full rounded-full bg-blue-400 p-2 text-white'*/}
+            {/*    //   type='submit'*/}
+            {/*    // >*/}
+            {/*    //   Create Meal*/}
+            {/*    // </button>*/}
+              <button
+                  className="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
                   type='submit'
                 >
-                  Create Meal
+                  <span
+                    className="absolute left-0 transition-transform -translate-x-full group-hover:translate-x-4"
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </span>
+
+                  <span className="text-sm font-medium transition-all group-hover:ml-4">
+                    Submit
+                  </span>
                 </button>
-            )}
+            {/*)}*/}
           </div>
       </form>
   )

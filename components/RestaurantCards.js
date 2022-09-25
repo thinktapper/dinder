@@ -32,7 +32,7 @@ export default function Meal({ data }) {
   const [restaurants, setRestaurants] = useState([
     {
       "id": "001",
-      "image": "https://imgur.com/OckVkRo.jpg",
+      "image": "https://imgur.com/RD79hZb.jpg",
       "name": "HasCheesBurgers",
       "description": "After deciding if canHasCheesburger, get off your can and can-can on down to HasCheeseburger for all your cheeseburger needs.",
       "cuisine": "American",
@@ -42,7 +42,7 @@ export default function Meal({ data }) {
     },
     {
       "id": "002",
-      "image": "https://imgur.com/oPj4A8u.jpg",
+      "image": "https://imgur.com/P20HZrk.jpg",
       "name": "Luxury houseboat",
       "description": "Sat three ready meat myself tonight replied terrible town anybody.",
       "cuisine": "Mexican",
@@ -53,7 +53,7 @@ export default function Meal({ data }) {
     },
     {
       "id": "003",
-      "image": "https://imgur.com/Q9WPlWA.jpg",
+      "image": "https://imgur.com/CmDAQXP.jpg",
       "name": "Fishi Sushi",
       "description": "The fishiest Sushi around. Just follow your nose to Fishi Sushi. From the moment you walk in you will think to yourself, 'Something smells Fishi'.",
       "cuisine": "Asian",
@@ -64,7 +64,7 @@ export default function Meal({ data }) {
     },
     {
       "id": "004",
-      "image": "https://imgur.com/wDmRJPc.jpg",
+      "image": "https://imgur.com/tvwz4d9.jpg",
       "name": "The Mill",
       "description": "Extremity direction existence as dashwoods do up. Securing marianne led welcomed offended but offering six raptures.",
       "cuisine": "American",
