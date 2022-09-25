@@ -4,7 +4,8 @@ Write a short sentence or two about this project and what it does. Be sure to in
 
 **Link to project:** http://recruiters-love-seeing-live-demos.com/
 
-![alt tag](https://source.unsplash.com/random/1200×650/?restaurant)
+![Large GIF (1144x696)](https://user-images.githubusercontent.com/10656909/192123894-85d3dc5f-7ca6-4977-b076-acff51520c55.gif)
+
 
 ## How It's Made:
 
