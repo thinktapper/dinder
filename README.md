@@ -1,5 +1,6 @@
 # My <sup>solo <sup>100hrs</sup></sup> project
 
+![dinder-white_color](https://user-images.githubusercontent.com/10656909/192128259-0755450e-6e1d-40e8-be0b-0769908d3526.svg)
 
 Going out to eat with friends is a great way to catch up and enjoy each other's company. But it can be a 
 hassle to find a place that everyone likes. Dinder helps you find a place that everyone agrees on.
