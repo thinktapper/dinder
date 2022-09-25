@@ -15,8 +15,8 @@ alt="Logo" width="320" height="">
 <p align='center'>Going out to eat with friends is a great way to catch up and enjoy each other's company. But 
 it can 
 be a 
-hassle to find a place that everyone likes. Dinder helps you find a place that everyone agrees on.
-Like Tinder for food, use swipe matching to decide on the perfect place for your next meal.</p>
+hassle to find a place that everyone likes. Dinder helps you find a place that everyone agrees on.</p>
+<p align='center'>Like Tinder for food, use swipe matching to decide on the perfect place for your next meal.</p>
 
 [//]: # (**Link to project:** http://recruiters-love-seeing-live-demos.com/)
 
