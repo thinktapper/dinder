@@ -7,7 +7,7 @@
 <div align="center">
   <a href="https://github.com/thinktapper/dinder">
     <img src="https://user-images.githubusercontent.com/10656909/192128259-0755450e-6e1d-40e8-be0b-0769908d3526.svg" 
-alt="Logo" width="120" height="120">
+alt="Logo" width="320" height="">
   </a>
 <h3 align="center">Swipe. Match. Eat.</h3>
 </div>
