@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f929b0ec-e288-4748-98d6-c8d181cb4b3f" name="Changes" comment=":zap: Update heroicons to v2, add swipe buttons component">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +152,7 @@
       <workItem from="1663739030423" duration="602000" />
       <workItem from="1663760375929" duration="803000" />
       <workItem from="1663978643927" duration="2733000" />
-      <workItem from="1664061457711" duration="7285000" />
+      <workItem from="1664061457711" duration="8182000" />
     </task>
     <task id="LOCAL-00001" summary=":bricks: Errare humanum est.">
       <created>1661354665389</created>
