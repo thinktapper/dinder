@@ -12,9 +12,11 @@ alt="Logo" width="320" height="">
 <h3 align="center">Swipe. Match. Eat.</h3>
 </div>
 
-Going out to eat with friends is a great way to catch up and enjoy each other's company. But it can be a 
+<p align='center'>Going out to eat with friends is a great way to catch up and enjoy each other's company. But 
+it can 
+be a 
 hassle to find a place that everyone likes. Dinder helps you find a place that everyone agrees on.
-Like Tinder for food, use swipe matching to decide on the perfect place for your next meal.
+Like Tinder for food, use swipe matching to decide on the perfect place for your next meal.</p>
 
 [//]: # (**Link to project:** http://recruiters-love-seeing-live-demos.com/)
 
