@@ -67,9 +67,9 @@
 
 <!-- ABOUT THE PROJECT -->
 <h2>About The Project</h2>
-<div align="center">
 
 <p>Like Tinder for food, use swipe matching to decide on the perfect place for your next meal.</p>
+<div align="center">
 
 ![Large GIF (1144x696)](https://user-images.githubusercontent.com/10656909/192123894-85d3dc5f-7ca6-4977-b076-acff51520c55.gif)
 
