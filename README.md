@@ -56,18 +56,18 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li> -->
-    <li><a href="#usage">How It's Made</a></li>
+    <li><a href="#how-its-made">How It's Made</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
-<div align="center">
 <h2>About The Project</h2>
+<div align="center">
 
 <p>Like Tinder for food, use swipe matching to decide on the perfect place for your next meal.</p>
 
@@ -127,8 +127,6 @@ yarn dev
 <!-- USAGE EXAMPLES -->
 
 ## How It's Made:
-
-**Tech used:** React, Next.js, TailwindCSS, Prisma, PostgreSQL, Google Places API
 
 This project was made using React and Next.js. I used TailwindCSS for styling and Supabase for the PostgreSQL database.
 Prisma was used to generate the database models. The Google Places API was used to get the location & restaurant data.
