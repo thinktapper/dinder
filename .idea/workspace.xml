@@ -59,7 +59,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/opt/homebrew/lib/node_modules/prettier",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "settings.editor.selected.configurable": "preferences.customizations",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -159,7 +159,8 @@
       <workItem from="1663760375929" duration="803000" />
       <workItem from="1663978643927" duration="2733000" />
       <workItem from="1664061457711" duration="19717000" />
-      <workItem from="1664154813577" duration="1917000" />
+      <workItem from="1664154813577" duration="5737000" />
+      <workItem from="1664181076787" duration="475000" />
     </task>
     <task id="LOCAL-00001" summary=":bricks: Errare humanum est.">
       <created>1661354665389</created>
