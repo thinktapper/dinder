@@ -42,8 +42,9 @@ model Session {
 
 model User {
   id                String       @id @unique @default(cuid())
-  username          String       @unique @db.VarChar(255)
-  email             String       @unique @db.VarChar(255)
+  name              String?
+  username          String?      @unique @db.VarChar(255)
+  email             String?      @unique @db.VarChar(255)
   emailVerified     DateTime?
   image             String?
   accounts          Account[]
