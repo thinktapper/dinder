@@ -8,10 +8,10 @@ export default async function handler(req, res) {
     return res.status(401).json({ message: 'Unauthorized.' })
   }
 
-  // Create new meal
+  // Create new feast
   if (req.method === 'POST') {
     try {
-      let { name, endDate, voteDate, lat, long, distance, guestList } = req.body
+      let { name, endDate, startDate, lat, long, distance, herd } = req.body
       lat = parseFloat(lat)
       long = parseFloat(long)
 
@@ -20,19 +20,19 @@ export default async function handler(req, res) {
         where: { email: session.user.email },
       })
 
-      const meal = await prisma.meal.create({
+      const feast = await prisma.feast.create({
         data: {
           name,
           endDate,
-          voteDate,
+          startDate,
           lat,
           long,
           distance,
           organizerId: user.id,
-          joinedBy: guestList,
+          herd: herd.id,
         },
       })
-      res.status(200).json(meal)
+      res.status(200).json(feast)
     } catch (e) {
       console.log(e)
       res.status(500).json({ message: 'Something went wrong', e })

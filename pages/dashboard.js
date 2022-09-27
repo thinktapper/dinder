@@ -17,8 +17,8 @@ export async function getServerSideProps(context) {
     }
   }
 
-  // Get all meals from the authenticated user
-  const meals = await prisma.meal.findMany({
+  // Get all herds from the authenticated user
+  const meals = await prisma.herd.findMany({
     where: { organizer: { email: session.user.email } },
     orderBy: { createdAt: 'desc' },
   })
@@ -26,18 +26,18 @@ export async function getServerSideProps(context) {
   // Pass the data to the Dashboard component
   return {
     props: {
-      meals: JSON.parse(JSON.stringify(meals)),
+      herds: JSON.parse(JSON.stringify(herds)),
     },
   }
 }
 
-const Dashboard = ({ meals = [] }) => {
+const Dashboard = ({ herds = [] }) => {
   return (
     <Layout>
-      <h1 className="text-xl font-medium text-gray-800">Your meals</h1>
-      <p className="text-gray-500">Manage your meals and update your events</p>
+      <h1 className="text-xl font-medium text-gray-800">Your herds</h1>
+      <p className="text-gray-500">Manage your herds and update your feasts</p>
       <div className="mt-8">
-        <Grid meals={meals} />
+        <Grid herds={herds} />
       </div>
     </Layout>
   )

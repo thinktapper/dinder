@@ -6,34 +6,31 @@ import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 // import axios from 'axios'
 // import toast from 'react-hot-toast'
 
-const Grid = ({ meals = [] }) => {
-    const router = useRouter()
-    const isEmpty = meals.length === 0
+const Grid = ({ herds = [] }) => {
+  const router = useRouter()
+  const isEmpty = herds.length === 0
 
-    return isEmpty ? (
-        <p className="text-amber-700 bg-amber-100 px-4 rounded-md py-2 max-w-max inline-flex items-center space-x-1">
-            <ExclamationTriangleIcon className="shrink-0 w-5 h-5 mt-px" />
-            <span>Unfortunately, there is nothing to display yet.</span>
-            <button
-                className="mt-6 w-full bg-rose-600 text-white py-2 px-8 rounded-md"
-                onClick={() => router.push('/create')}>
-                Create a Meal
-            </button>
-        </p>
-    ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {meals.map(meal => (
-                <Card
-                    key={meal.id}
-                    {...meal}
-                />
-            ))}
-        </div>
-    )
+  return isEmpty ? (
+    <p className="inline-flex items-center px-4 py-2 space-x-1 rounded-md text-amber-700 bg-amber-100 max-w-max">
+      <ExclamationTriangleIcon className="w-5 h-5 mt-px shrink-0" />
+      <span>Unfortunately, there is nothing to display yet.</span>
+      <button
+        className="w-full px-8 py-2 mt-6 text-white rounded-md bg-rose-600"
+        onClick={() => router.push('/create')}>
+        Form a Herd
+      </button>
+    </p>
+  ) : (
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {herds.map(herd => (
+        <Card key={herd.id} {...herd} />
+      ))}
+    </div>
+  )
 }
 
 Grid.propTypes = {
-    meals: PropTypes.array,
+  herds: PropTypes.array,
 }
 
 export default Grid
