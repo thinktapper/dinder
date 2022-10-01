@@ -18,8 +18,8 @@ export async function getServerSideProps(context) {
   }
 
   // Get all herds from the authenticated user
-  const meals = await prisma.herd.findMany({
-    where: { organizer: { email: session.user.email } },
+  const herds = await prisma.herd.findMany({
+    where: { members: { id: session.user.id } },
     orderBy: { createdAt: 'desc' },
   })
 
