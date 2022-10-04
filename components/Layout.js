@@ -81,10 +81,6 @@ const Layout = ({ children }) => {
               <Link href="/">
                 <a className="flex items-center space-x-1">
                   <Image src={whereAmI === '/' ? '/dinder-white_color.svg' : '/dinder-black_color.svg'} alt='Dinder Logo' width={155} height={45} />
-                  {/* <SparklesIcon className="shrink-0 w-8 h-8 text-rose-500" />
-                  <span className="text-xl font-semibold tracking-wide">
-                    Supa<span className="text-rose-600">Vacation</span>
-                  </span> */}
                 </a>
               </Link>
               <div className="flex items-center space-x-4">
